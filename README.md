@@ -58,11 +58,4 @@ To share a custom report layout, submit your template to the `community-template
 
 All submissions must comply with our [Developer & Security Policies](https://www.kaptan-data-solutions.app/Data_Policy). Ensure no Patient Health Information (PHI) is included in any test data or screenshots.
 
-## Announcing your Contribution
-
-Once your template or plugin is approved:
-
-1. Share it in our **AuditRay Showcase** forum.
-2. Post an update in our **Medical Physicist Discord** in the `#integrations` channel.
-
 *Thank you for helping us make Radiotherapy Quality Control safer and faster!*
