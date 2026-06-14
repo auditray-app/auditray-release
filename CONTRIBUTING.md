@@ -1,6 +1,6 @@
-# Contributing to Understand Anything
+# Contributing to AuditRay 
 
-Thank you for your interest in contributing to Understand Anything! This document provides guidelines and instructions for contributing to the project.
+Thank you for your interest in contributing to AuditRay! This document provides guidelines and instructions for contributing to the project.
 
 ## 🌟 Ways to Contribute
 
@@ -14,37 +14,36 @@ Thank you for your interest in contributing to Understand Anything! This documen
 
 ### Prerequisites
 
-- Node.js >= 22 (developed on v24)
-- pnpm >= 10 (pinned via `packageManager` field in root `package.json`)
+- ...
+- ...
 - Git for version control
 
 ### Setup
 
 1. **Fork and Clone**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/Understand-Anything.git
-   cd Understand-Anything
+   git clone ...
+   cd auditray-release
    ```
 
 2. **Install Dependencies**
    ```bash
-   pnpm install
+   ...
    ```
 
 3. **Build Core Package**
    ```bash
-   pnpm --filter @understand-anything/core build
+   ...
    ```
 
 4. **Run Tests**
    ```bash
-   pnpm --filter @understand-anything/core test
-   pnpm --filter @understand-anything/skill test
+   ...
    ```
 
-5. **Start Dashboard (Optional)**
+5. **Start**
    ```bash
-   pnpm dev:dashboard
+   ...
    ```
 
 ## 📝 Development Workflow
@@ -69,14 +68,13 @@ git checkout -b docs/update-readme     # For documentation
 
 ```bash
 # Run all tests
-pnpm --filter @understand-anything/core test
-pnpm --filter @understand-anything/skill test
+...
 
 # Run linter
-pnpm lint
+...
 
 # Build packages
-pnpm build
+...
 ```
 
 ### 4. Commit Your Changes
@@ -112,87 +110,49 @@ Then open a Pull Request on GitHub with:
 
 ### Writing Tests
 
-- Use Vitest for testing
-- Place tests in `__tests__` directories or `*.test.ts` files
-- Aim for high test coverage for new features
-- Test edge cases and error conditions
+...
 
 Example test structure:
-```typescript
-import { describe, it, expect } from 'vitest';
-
-describe('MyFeature', () => {
-  it('should do something', () => {
-    // Arrange
-    const input = 'test';
-
-    // Act
-    const result = myFunction(input);
-
-    // Assert
-    expect(result).toBe('expected');
-  });
-});
+```
+...
 ```
 
 ### Running Tests
 
 ```bash
 # Run all tests
-pnpm test
+...
 
 # Run tests for specific package
-pnpm --filter @understand-anything/core test
+...
 
 # Run tests in watch mode
-pnpm --filter @understand-anything/core test --watch
+...
 ```
 
 ## 📚 Code Style Guidelines
 
 ### TypeScript
 
-- Use TypeScript strict mode
-- Define explicit types for function parameters and return values
-- Avoid `any` type - use `unknown` if type is truly unknown
-- Use interfaces for object shapes
-- Use type aliases for unions and complex types
+...
 
 ### Formatting
 
-- The project uses ESLint for code quality
-- Consistent indentation (2 spaces)
-- Use meaningful variable and function names
-- Keep functions small and focused
+...
 
 ### React/Dashboard
 
-- Use functional components with hooks
-- Keep components focused and single-purpose
-- Use Zustand for state management
-- Follow the existing component structure
+...
 
 ### Tech Stack
 
-TypeScript, pnpm workspaces, React 18, Vite, TailwindCSS v4, React Flow, Zustand, web-tree-sitter, Fuse.js, Zod, Dagre
+...
 
 ### File Organization
 
 ```
-understand-anything-plugin/
-├── packages/
-│   ├── core/              # Core analysis engine
-│   │   ├── src/
-│   │   └── package.json
-│   └── dashboard/         # React dashboard
-│       ├── src/
-│       │   ├── components/
-│       │   ├── utils/
-│       │   └── store.ts
-│       └── package.json
-├── src/                   # Plugin skills implementation
-├── agents/                # AI agent prompts
-└── skills/                # Skill definitions
+...
+
 ```
 
 ## 🌍 Translation Guidelines
@@ -260,7 +220,7 @@ Before submitting a PR, ensure:
 
 ## 📄 License
 
-By contributing, you agree that your contributions will be licensed under the MIT License.
+By contributing, you agree that your contributions will be licensed under the ... License.
 
 ## 🙏 Recognition
 
@@ -271,4 +231,4 @@ Contributors will be recognized in:
 
 ---
 
-**Thank you for contributing to Understand Anything! Your contributions help make code understanding accessible to everyone.** 🚀
+**Thank you for contributing to AuditRay! Your contributions help make code understanding accessible to everyone.** 🚀
