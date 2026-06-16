@@ -10,18 +10,39 @@ Les données sont anonymisées ou synthétiques. **Aucune donnée de santé à c
 
 ```
 Jeux de données/
-├── picket-fence/        # UC3 — Contrôle MLC (lames du collimateur multilames)
-├── winston-lutz/        # UC3 — Contrôle de l'isocentre mécanique
-├── vmat-qa/             # UC4/UC5 — Contrôle patient VMAT (Clinac iX)
-├── mlc-transmission/    # UC3 — Transmission résiduelle des lames MLC
-├── starshot/            # UC3 — Rotation gantry / collimateur (Starshot)
-├── beam-output/         # UC2 — Rendement et sorties faisceau (MPC)
-├── field-size/          # UC2 — Contrôle de la taille de champ
-├── gamma-index/         # UC4/UC5 — Contrôle patient : indice gamma
-└── image-qualite/       # UC6 — Qualité d'image (CatPhan 504, MV Imager)
+│
+│  ── Référentiel national (4 axes) ──────────────────────────────────────
+├── jeux-reels-anonymises/   # Données terrain issues de LINAC réels, anonymisées
+├── donnees-synthetiques/    # Données générées par script pour l'entraînement IA
+├── cas-hors-tolerances/     # Dépassements cliniquement pertinents (rares et précieux)
+├── scripts-analyse/         # Scripts Python communautaires, intégrables dans AuditRay
+│
+│  ── Données de référence par type de test ──────────────────────────────
+├── picket-fence/            # UC3 — Contrôle MLC (lames du collimateur multilames)
+├── winston-lutz/            # UC3 — Contrôle de l'isocentre mécanique
+├── vmat-qa/                 # UC4/UC5 — Contrôle patient VMAT (Clinac iX)
+├── mlc-transmission/        # UC3 — Transmission résiduelle des lames MLC
+├── starshot/                # UC3 — Rotation gantry / collimateur (Starshot)
+├── beam-output/             # UC2 — Rendement et sorties faisceau (MPC)
+├── field-size/              # UC2 — Contrôle de la taille de champ
+├── gamma-index/             # UC4/UC5 — Contrôle patient : indice gamma
+└── image-qualite/           # UC6 — Qualité d'image (CatPhan 504, MV Imager)
 ```
 
 Les numéros UC renvoient aux unités de contrôle définies par la **décision ANSM du 28/02/2023** relative au contrôle qualité des installations de radiothérapie externe.
+
+---
+
+## Référentiel national — les 4 axes
+
+Ces quatre dossiers forment le cœur du référentiel collaboratif AuditRay, inspiré du schéma présenté au congrès **SFPM 2026**.
+
+| Dossier | Rôle | Lien |
+|---|---|---|
+| `jeux-reels-anonymises/` | Données terrain issues de LINAC réels, strictement anonymisées | [→ README](jeux-reels-anonymises/README.md) |
+| `donnees-synthetiques/` | Données générées par script pour augmenter les volumes d'entraînement IA | [→ README](donnees-synthetiques/README.md) |
+| `cas-hors-tolerances/` | Dépassements cliniquement pertinents et rares — cœur de la détection d'anomalies | [→ README](cas-hors-tolerances/README.md) |
+| `scripts-analyse/` | Scripts Python communautaires intégrables dans AuditRay via API REST | [→ README](scripts-analyse/README.md) |
 
 ---
 

@@ -19,6 +19,7 @@
 </p>
 
 <p align="center">
+  <a href="https://www.kaptan-data-solutions.app/upcoming_saas"><img src="https://img.shields.io/badge/🚀_Early_Access-Join_the_list-E8622A?style=flat-square" alt="Early Access" /></a>
   <a href="https://kaptan-data-solutions.app/"><img src="https://img.shields.io/badge/Official_Site-AuditRay-E8622A?style=flat-square&logo=safari&logoColor=white" alt="Official Site" /></a>
   <a href="https://kaptandatasolutions.github.io/"><img src="https://img.shields.io/badge/Blog_KDS-kaptandatasolutions.github.io-1A2B4A?style=flat-square&logo=github&logoColor=white" alt="Blog KDS" /></a>
   <a href="https://github.com/kaptandatasolutions"><img src="https://img.shields.io/badge/Author-kaptandatasolutions-24292e?style=flat-square&logo=github&logoColor=white" alt="kaptandatasolutions" /></a>
@@ -31,6 +32,12 @@
 </p>
 
 ---
+
+<p align="center">
+  <a href="https://www.kaptan-data-solutions.app/upcoming_saas">
+    <img src="https://img.shields.io/badge/🚀%20Early%20Access%20—%20Join%20the%20pioneer%20physicists%20list-Free%20registration-E8622A?style=for-the-badge" alt="Join the waitlist" />
+  </a>
+</p>
 
 > **A radiotherapy department produces dozens of quality controls per week, scattered across heterogeneous tools. How do you guarantee traceability, ANSM compliance, and data capitalisation — while saving time?**
 
@@ -117,6 +124,29 @@ Submit your Python script via a pull request on `community-plugins.json`:
 > **No patient data (PHI / personal health information) must be included in your contributions.** Always anonymize your DICOM files before committing. See [SECURITY.md](../SECURITY.md) for anonymisation rules.
 
 See [CONTRIBUTING.md](../CONTRIBUTING.md) for the full guide.
+
+---
+
+## 🚀 Early Access — Join the pioneer physicists
+
+> [!IMPORTANT]
+> **AuditRay is currently being deployed.** Medical physicists who register now get **priority access**, a **free trial period**, and a **direct voice in the roadmap** — your real-world feedback shapes the platform.
+
+**Why register now?**
+
+- ✅ **Priority access** — be among the first institutions to use AuditRay before the public launch.
+- ✅ **Free trial** — test the platform on your own LINAC data with no commitment.
+- ✅ **Co-build the product** — your field needs (equipment, protocols, formats) drive the development priorities.
+- ✅ **Founding community** — join the pioneer physicists network to share scripts and real-world experience.
+- ✅ **ANSM-compliant from day one** — native UC1–UC8 / S1–S3 architecture, no adaptation required.
+
+<p align="center">
+  <a href="https://www.kaptan-data-solutions.app/upcoming_saas">
+    <img src="https://img.shields.io/badge/👉%20Register%20for%20early%20access-kaptan--data--solutions.app-E8622A?style=for-the-badge" alt="Register" />
+  </a>
+</p>
+
+<p align="center"><em>Free registration · No commitment · Secure data</em></p>
 
 ---
 
