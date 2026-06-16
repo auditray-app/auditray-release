@@ -1,27 +1,53 @@
-# Reporting security issues
+# Signalement de vulnérabilités de sécurité — AuditRay
 
-Thanks for taking the time to disclose responsibly.
+Merci de prendre le temps de signaler de manière responsable. La sécurité est une priorité absolue pour AuditRay, notamment en raison de la sensibilité des données manipulées dans un contexte médical et réglementaire.
 
-## How to report
+---
 
-Please use GitHub's [private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability)
-on this repository. That keeps the report visible to the maintainer without
-exposing the details publicly.
+## Comment signaler
 
-If private reporting is unavailable for any reason, open a regular issue
-titled `security: brief description` **without** any exploit details, and
-the maintainer will reply with a private channel.
+Utilisez le [signalement privé de vulnérabilité GitHub](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability) sur ce dépôt. Cela permet au mainteneur de prendre connaissance du rapport sans exposer les détails publiquement.
 
-## What to include
+Si le signalement privé n'est pas disponible, ouvrez une issue intitulée `security: description courte` **sans** détails d'exploitation — le mainteneur vous contactera via un canal privé.
 
-- A description of the issue and its potential impact.
-- Steps to reproduce — minimal is fine, a full PoC is not required.
-- Affected versions if you've narrowed them down.
-- Whether you'd like to be credited in the eventual fix.
+Pour tout signalement urgent (données patient exposées, accès non autorisé à la plateforme), contactez directement : [kaptan-data-solutions.app/contact](https://www.kaptan-data-solutions.app/contact)
 
-## What to expect
+---
 
-- Initial acknowledgement within a few days.
-- A fix or mitigation plan within ~30 days for confirmed issues; longer for
-  cases that require coordinated disclosure with upstream dependencies.
-- Public credit once a fix has shipped, if you'd like.
+## Informations à inclure
+
+- Description de la vulnérabilité et de son impact potentiel.
+- Étapes de reproduction — une description minimale suffit, un PoC complet n'est pas requis.
+- Versions affectées, si vous les avez identifiées.
+- Si la vulnérabilité concerne des données de santé (PHI/DCP), précisez-le explicitement — cela déclenchera un traitement prioritaire.
+- Votre souhait d'être crédité dans le correctif (optionnel).
+
+---
+
+## Périmètre de sécurité spécifique à AuditRay
+
+En raison du contexte médical et réglementaire de la plateforme, les vulnérabilités suivantes sont considérées comme critiques :
+
+| Catégorie | Exemples |
+|---|---|
+| **Données patient (PHI/DCP)** | Exposition de données DICOM identifiables, fuite de métadonnées patient |
+| **Intégrité des données d'AQ** | Altération silencieuse des valeurs de contrôle, falsification de rapports ANSM |
+| **Accès non autorisé** | Contournement d'authentification, élévation de privilèges entre établissements |
+| **API REST publique** | Injection, SSRF, exposition de données inter-tenants |
+| **Plugins communautaires** | Exécution de code arbitraire via un plugin malveillant soumis au marketplace |
+
+---
+
+## Ce que vous pouvez attendre
+
+- Accusé de réception sous quelques jours ouvrés.
+- Plan de correction ou de mitigation sous **~30 jours** pour les vulnérabilités confirmées.
+- Traitement prioritaire sous **72 heures** pour toute vulnérabilité impliquant des données patient.
+- Coordinations avec les dépendances upstream si nécessaire (délai plus long).
+- Crédit public après publication du correctif, si vous le souhaitez.
+
+---
+
+## Ce dépôt vs. la plateforme SaaS
+
+Ce dépôt public héberge les releases, templates et plugins communautaires. Il ne contient pas le code source de la plateforme AuditRay. Les vulnérabilités de la plateforme SaaS (application web, API, infrastructure) doivent également être signalées ici — elles seront redirigées vers l'équipe KDS compétente.

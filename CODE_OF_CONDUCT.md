@@ -1,39 +1,32 @@
-# Code of Conduct
+# Code de conduite — Communauté AuditRay
 
-We want this project to be a welcoming place for everyone who wants to
-contribute, learn, or use it — regardless of experience level, background, or
-identity.
+Nous souhaitons que ce projet soit un espace accueillant pour tout physicien médical, développeur, chercheur ou professionnel de santé souhaitant contribuer, apprendre ou utiliser AuditRay — quels que soient son niveau d'expérience, son établissement ou son parcours.
 
-## In short
+## En bref
 
-- **Be respectful.** Treat others the way you'd want to be treated.
-- **Assume good intent.** Most disagreements are misunderstandings.
-- **Be constructive.** Critique ideas, not people. Suggest improvements.
-- **Keep it on-topic.** This project is about understanding codebases.
+- **Soyez respectueux.** Traitez les autres comme vous souhaiteriez être traité.
+- **Présumez la bonne foi.** La plupart des désaccords sont des malentendus.
+- **Soyez constructif.** Critiquez les idées, pas les personnes. Proposez des améliorations.
+- **Restez dans le sujet.** Ce projet concerne l'assurance qualité en radiothérapie et la conformité ANSM.
+- **Protégez les données patient.** Ne partagez jamais de données de santé à caractère personnel (DCP / PHI) dans quelque espace de ce projet que ce soit — issues, pull requests, commentaires ou discussions.
 
-## What's not OK
+## Ce qui n'est pas acceptable
 
-- Personal attacks, insults, or sustained disruption of discussions.
-- Posting someone's private information without their explicit permission.
-- Repeatedly ignoring requests from maintainers to change behavior.
+- Attaques personnelles, insultes ou perturbation répétée des discussions.
+- Publication d'informations privées d'une personne sans son consentement explicite.
+- Partage de données patient réelles ou identifiables, même partiellement anonymisées.
+- Non-respect répété des demandes des mainteneurs de modifier un comportement.
 
-## Reporting
+## Signalement
 
-If you see behavior that violates this code, please open a private email to
-the maintainer listed in the repository profile, or use GitHub's
-[private vulnerability / abuse reporting](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam).
+Si vous observez un comportement contraire à ce code, contactez le mainteneur par email privé (voir le profil du dépôt) ou utilisez le système de [signalement d'abus GitHub](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam).
 
-Maintainers will review reports and take whatever action they think is
-appropriate — typically a private warning, sometimes a temporary or permanent
-ban from the project. Reports will be kept confidential.
+Les signalements seront traités de manière confidentielle. Les mainteneurs prendront les mesures appropriées — avertissement privé, suspension temporaire ou permanente du projet.
 
-## Scope
+## Périmètre
 
-This code applies in all project spaces: issues, pull requests, discussions,
-commits, and any other project-affiliated channel.
+Ce code s'applique à tous les espaces du projet : issues, pull requests, discussions, commits, forum communautaire et tout autre canal affilié à AuditRay.
 
 ---
 
-This document is intentionally short. It's based on the spirit of the
-[Contributor Covenant](https://www.contributor-covenant.org/) without
-reproducing it verbatim.
+Ce document s'inspire de l'esprit du [Contributor Covenant](https://www.contributor-covenant.org/), adapté au contexte médical et réglementaire d'AuditRay.

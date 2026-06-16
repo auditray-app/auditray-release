@@ -1,234 +1,168 @@
-# Contributing to AuditRay 
+# Contribuer à AuditRay
 
-Thank you for your interest in contributing to AuditRay! This document provides guidelines and instructions for contributing to the project.
-
-## 🌟 Ways to Contribute
-
-- **Bug Reports**: Found a bug? Open an issue with detailed reproduction steps
-- **Feature Requests**: Have an idea? Share it in the issues section
-- **Documentation**: Improve or translate documentation
-- **Code**: Fix bugs, add features, or improve performance
-- **Testing**: Write tests to improve code coverage
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- ...
-- ...
-- Git for version control
-
-### Setup
-
-1. **Fork and Clone**
-   ```bash
-   git clone ...
-   cd auditray-release
-   ```
-
-2. **Install Dependencies**
-   ```bash
-   ...
-   ```
-
-3. **Build Core Package**
-   ```bash
-   ...
-   ```
-
-4. **Run Tests**
-   ```bash
-   ...
-   ```
-
-5. **Start**
-   ```bash
-   ...
-   ```
-
-## 📝 Development Workflow
-
-### 1. Create a Branch
-
-Create a descriptive branch name:
-```bash
-git checkout -b feat/my-feature        # For new features
-git checkout -b fix/bug-description    # For bug fixes
-git checkout -b docs/update-readme     # For documentation
-```
-
-### 2. Make Changes
-
-- Write clean, readable code
-- Follow existing code style and conventions
-- Add tests for new functionality
-- Update documentation as needed
-
-### 3. Test Your Changes
-
-```bash
-# Run all tests
-...
-
-# Run linter
-...
-
-# Build packages
-...
-```
-
-### 4. Commit Your Changes
-
-Write clear, descriptive commit messages:
-```bash
-git add .
-git commit -m "feat: add keyboard shortcuts to dashboard"
-```
-
-**Commit Message Convention:**
-- `feat:` - New feature
-- `fix:` - Bug fix
-- `docs:` - Documentation changes
-- `style:` - Code style changes (formatting, etc.)
-- `refactor:` - Code refactoring
-- `test:` - Adding or updating tests
-- `chore:` - Maintenance tasks
-
-### 5. Push and Create Pull Request
-
-```bash
-git push origin your-branch-name
-```
-
-Then open a Pull Request on GitHub with:
-- Clear title describing the change
-- Detailed description of what changed and why
-- Link to related issues (if any)
-- Screenshots (for UI changes)
-
-## 🧪 Testing Guidelines
-
-### Writing Tests
-
-...
-
-Example test structure:
-```
-...
-```
-
-### Running Tests
-
-```bash
-# Run all tests
-...
-
-# Run tests for specific package
-...
-
-# Run tests in watch mode
-...
-```
-
-## 📚 Code Style Guidelines
-
-### TypeScript
-
-...
-
-### Formatting
-
-...
-
-### React/Dashboard
-
-...
-
-### Tech Stack
-
-...
-
-### File Organization
-
-```
-...
-
-```
-
-## 🌍 Translation Guidelines
-
-### Adding a New Language
-
-1. Create `README.{language-code}.md` (e.g., `README.fr-FR.md`)
-2. Translate all sections while maintaining formatting
-3. Update main `README.md` to include language link
-4. Keep technical terms in English where appropriate
-5. Ensure all links still work
-
-Example:
-```markdown
-<a href="README.md">English</a> | <a href="README.fr-FR.md">Français</a>
-```
-
-## 🐛 Bug Reports
-
-When reporting bugs, include:
-
-- **Description**: Clear description of the issue
-- **Steps to Reproduce**: Detailed steps to reproduce the bug
-- **Expected Behavior**: What you expected to happen
-- **Actual Behavior**: What actually happened
-- **Environment**: OS, Node version, pnpm version
-- **Screenshots**: If applicable
-- **Error Messages**: Full error output
-
-## 💡 Feature Requests
-
-When requesting features:
-
-- **Use Case**: Describe the problem you're trying to solve
-- **Proposed Solution**: How you envision the feature working
-- **Alternatives**: Other solutions you've considered
-- **Additional Context**: Any other relevant information
-
-## 📋 Pull Request Checklist
-
-Before submitting a PR, ensure:
-
-- [ ] Code follows the project's style guidelines
-- [ ] All tests pass (`pnpm test`)
-- [ ] New code has test coverage
-- [ ] Documentation is updated (if needed)
-- [ ] Commit messages follow convention
-- [ ] PR description clearly explains changes
-- [ ] No console.log or debug code left behind
-- [ ] Branch is up to date with main
-
-## 🤝 Code Review Process
-
-1. **Automated Checks**: CI runs tests and linting
-2. **Maintainer Review**: Project maintainers review the code
-3. **Feedback**: Address any requested changes
-4. **Approval**: Once approved, PR will be merged
-5. **Cleanup**: Delete your branch after merge
-
-## 📞 Getting Help
-
-- **Issues**: For bugs and feature requests
-- **Discussions**: For questions and general discussion
-- **Documentation**: Check existing docs first
-
-## 📄 License
-
-By contributing, you agree that your contributions will be licensed under the ... License.
-
-## 🙏 Recognition
-
-Contributors will be recognized in:
-- GitHub contributors list
-- Release notes (for significant contributions)
-- Special mentions for exceptional contributions
+Merci de l'intérêt que vous portez à l'écosystème AuditRay. Ce guide décrit comment contribuer efficacement à ce dépôt public — plugins d'analyse, templates de rapports, documentation et remontées de bugs.
 
 ---
 
-**Thank you for contributing to AuditRay! Your contributions help make code understanding accessible to everyone.** 🚀
+## Modes de contribution
+
+| Type | Description |
+|---|---|
+| **Plugin d'analyse** | Script Python automatisant un ou plusieurs contrôles ANSM, soumis via `community-plugins.json` |
+| **Template de rapport** | Mise en page personnalisée de rapport d'audit, soumis via `community-templates.json` |
+| **Documentation** | Amélioration ou traduction de la documentation existante |
+| **Bug report** | Signalement d'un comportement inattendu dans l'API ou les templates |
+| **Demande de fonctionnalité** | Proposition d'évolution de la plateforme ou de l'API |
+
+---
+
+## Prérequis
+
+Avant de contribuer, assurez-vous de disposer de :
+
+- **Python 3.9+** — pour développer et tester vos scripts d'analyse
+- **Git** — pour la gestion de version
+- **pylinac** (optionnel) — pour les analyses d'images LINAC standardisées (Picket Fence, Winston-Lutz, VMAT QA, Starshot)
+- **Un compte GitHub** — pour ouvrir des issues et des pull requests
+- **Clé API AuditRay** (optionnel) — pour tester l'intégration de vos plugins via l'API REST publique
+
+---
+
+## Démarrage rapide
+
+### 1. Forker et cloner
+
+```bash
+git clone https://github.com/<votre-compte>/auditray-release.git
+cd auditray-release
+```
+
+### 2. Installer les dépendances Python (pour les plugins)
+
+```bash
+pip install pylinac numpy pandas pydicom
+```
+
+### 3. Tester votre script en local
+
+Votre script doit accepter en entrée un fichier DICOM ou CSV et retourner un JSON structuré conforme au schéma AuditRay. Consultez les exemples dans le répertoire `examples/` pour le format attendu.
+
+### 4. Soumettre
+
+Ajoutez votre entrée dans `community-plugins.json` ou `community-templates.json`, puis ouvrez une pull request.
+
+---
+
+## Workflow de développement
+
+### Créer une branche
+
+Utilisez un nommage descriptif :
+
+```bash
+git checkout -b plugin/picket-fence-iba      # Nouveau plugin
+git checkout -b fix/template-rapport-pdf     # Correction
+git checkout -b docs/guide-api-rest          # Documentation
+```
+
+### Convention de commit
+
+```bash
+git commit -m "plugin: add IBA MatriXX Picket Fence analysis"
+git commit -m "fix: correct UC3 tolerance threshold in template"
+git commit -m "docs: add API REST integration guide"
+```
+
+Préfixes acceptés :
+- `plugin:` — nouveau plugin d'analyse
+- `template:` — nouveau template de rapport
+- `fix:` — correction de bug
+- `docs:` — documentation
+- `chore:` — maintenance (mise à jour de dépendances, formatage)
+
+### Ouvrir une pull request
+
+Incluez dans la description :
+- Le ou les contrôles ANSM couverts (ex. : UC3, S1)
+- L'équipement ciblé si applicable (ex. : Varian TrueBeam, Elekta Versa HD)
+- Un exemple de sortie JSON anonymisé
+- Des captures d'écran si pertinent
+
+---
+
+## Format des contributions JSON
+
+### Plugin (`community-plugins.json`)
+
+```json
+{
+  "id": "picket-fence-iba-matrixx",
+  "name": "Picket Fence — IBA MatriXX",
+  "author": "Prénom Nom / CHU de Ville",
+  "description": "Analyse automatisée Picket Fence (UC3) pour détecteur IBA MatriXX. Retourne l'erreur maximale de lame en mm.",
+  "ansm_controls": ["UC3"],
+  "linac_type": ["Varian TrueBeam", "Elekta Versa HD"],
+  "repo": "utilisateur/depot-github",
+  "language": "Python",
+  "requires": ["pylinac>=3.0", "pydicom"]
+}
+```
+
+### Template (`community-templates.json`)
+
+```json
+{
+  "name": "Rapport UC1-UC8 mensuel — CHU",
+  "screenshot": "previews/rapport-chu-blurred.png",
+  "regulatory_version": "ANSM 2023",
+  "controls_covered": ["UC1", "UC2", "UC3", "UC4", "UC5", "UC6", "UC7", "UC8"],
+  "author": "Prénom Nom / CHU de Ville"
+}
+```
+
+---
+
+## Règles impératives
+
+### Données patient (PHI)
+
+> **Aucune donnée de santé à caractère personnel (DCP / PHI) ne doit figurer dans vos contributions.**
+
+- Anonymisez systématiquement les fichiers DICOM avant tout commit (supprimez les tags `PatientName`, `PatientID`, `PatientBirthDate`, etc.).
+- Utilisez des données synthétiques ou des fantômes de test.
+- En cas de doute, consultez [notre politique de données](https://www.kaptan-data-solutions.app/Data_Policy).
+
+### Qualité du code
+
+- Écrivez du code lisible, avec des noms de variables explicites.
+- Ajoutez un commentaire uniquement quand la logique n'est pas évidente.
+- Respectez PEP 8 pour Python.
+- Ne laissez pas de `print()` de debug dans le code soumis.
+
+---
+
+## Processus de revue
+
+1. **Vérifications automatiques** — format JSON, absence de PHI détectable
+2. **Revue par les mainteneurs KDS** — conformité ANSM, qualité du code
+3. **Retours** — adressez les modifications demandées dans votre branche
+4. **Validation** — fusion dans `main` après approbation
+5. **Publication** — votre contribution apparaît dans le marketplace AuditRay
+
+---
+
+## Obtenir de l'aide
+
+- **Issues GitHub** — pour les bugs et demandes de fonctionnalités
+- **Forum communautaire** — [kaptan-data-solutions.app/forum](https://www.kaptan-data-solutions.app/forum)
+- **Support** — [kaptan-data-solutions.app/support_ticket](https://www.kaptan-data-solutions.app/support_ticket)
+
+---
+
+## Licence des contributions
+
+En soumettant une contribution, vous acceptez qu'elle soit distribuée sous la licence de ce dépôt et intégrée au marketplace AuditRay. Votre nom ou celui de votre établissement sera crédité dans les métadonnées du plugin ou du template.
+
+---
+
+*Merci de contribuer à la communauté AuditRay et à la sécurité des patients en radiothérapie.*

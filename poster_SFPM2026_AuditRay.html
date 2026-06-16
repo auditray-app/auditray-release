@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuditRay — Poster SFPM 2026 Lyon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:    #E8622A;
+      --navy:      #1A2B4A;
+      --navy-light:#2C4170;
+      --teal:      #1D7A8A;
+      --teal-light:#E8F4F6;
+      --gray-bg:   #F5F6F8;
+      --gray-line: #D0D5DE;
+      --text:      #1E1E2E;
+      --white:     #FFFFFF;
+      --gold:      #C9962B;
+      --radius:    6px;
+    }
+
+    body {
+      font-family: 'Source Sans 3', 'Inter', Arial, sans-serif;
+      font-size: 11.2pt;
+      line-height: 1.45;
+      color: var(--text);
+      background: #E0E4EA;
+      padding: 18px;
+    }
+
+    /* ── POSTER WRAPPER ─────────────────────────────────────────── */
+    .poster {
+      width: 1189px;          /* A0 landscape approximation at 96dpi */
+      min-height: 841px;
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,.25);
+      margin: 0 auto;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    /* ── HEADER ────────────────────────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+      padding: 22px 36px 18px;
+      display: grid;
+      grid-template-columns: 110px 1fr 110px;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 5px solid var(--orange);
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-sfpm {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--navy);
+      letter-spacing: -1px;
+      border: 3px solid var(--orange);
+    }
+
+    .logo-kds {
+      width: 90px;
+      height: 90px;
+      border-radius: var(--radius);
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--white);
+      letter-spacing: 1px;
+    }
+
+    header .title-block { text-align: center; }
+
+    header h1 {
+      font-size: 20pt;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    header h1 span.highlight { color: var(--orange); }
+    header h1 em { font-style: italic; color: #B8D4FF; }
+
+    header .author {
+      font-size: 10.5pt;
+      color: #B8D4FF;
+      margin-top: 4px;
+    }
+
+    header .affil {
+      font-size: 9pt;
+      color: #8AAAD0;
+      margin-top: 2px;
+    }
+
+    header .abbrev {
+      font-size: 8.5pt;
+      color: #6B90B8;
+      margin-top: 6px;
+    }
+
+    /* ── BODY GRID ─────────────────────────────────────────────── */
+    .body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      padding: 0;
+    }
+
+    /* ── COLUMN ────────────────────────────────────────────────── */
+    .col {
+      padding: 18px 20px;
+      border-right: 1px solid var(--gray-line);
+    }
+    .col:last-child { border-right: none; }
+
+    /* ── SECTION HEADING ───────────────────────────────────────── */
+    .section-label {
+      text-align: center;
+      font-size: 13pt;
+      font-weight: 800;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 8px 0 6px;
+      border-bottom: 2.5px solid var(--orange);
+      margin-bottom: 12px;
+    }
+
+    /* ── SUB-HEADING ───────────────────────────────────────────── */
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: 6px;
+      margin-top: 14px;
+    }
+    h3:first-child { margin-top: 0; }
+
+    h4 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+      margin-top: 10px;
+    }
+
+    p { margin-bottom: 8px; font-size: 10.2pt; }
+
+    ul {
+      padding-left: 16px;
+      margin-bottom: 8px;
+    }
+    ul li { font-size: 10.2pt; margin-bottom: 3px; }
+
+    /* ── CITATION BOX ──────────────────────────────────────────── */
+    .citation {
+      background: var(--navy);
+      color: var(--white);
+      border-left: 5px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin: 10px 0 14px;
+      font-size: 10pt;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .citation strong { color: var(--orange); font-style: normal; }
+
+    /* ── AXES GRID ─────────────────────────────────────────────── */
+    .axes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 10px 0;
+    }
+
+    .axe-card {
+      background: var(--gray-bg);
+      border-radius: var(--radius);
+      border-top: 3px solid var(--teal);
+      padding: 9px 10px;
+    }
+
+    .axe-card.orange { border-top-color: var(--orange); }
+    .axe-card.gold   { border-top-color: var(--gold); }
+    .axe-card.navy   { border-top-color: var(--navy); }
+
+    .axe-card .axe-num {
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--teal);
+      margin-bottom: 2px;
+    }
+    .axe-card.orange .axe-num { color: var(--orange); }
+    .axe-card.gold   .axe-num { color: var(--gold); }
+    .axe-card.navy   .axe-num { color: var(--navy); }
+
+    .axe-card .axe-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .axe-card p {
+      font-size: 9pt;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* ── PIPELINE STRIP ────────────────────────────────────────── */
+    .pipeline {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      margin: 10px 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      font-size: 8.5pt;
+      font-weight: 600;
+    }
+
+    .pipe-step {
+      flex: 1;
+      background: var(--navy);
+      color: var(--white);
+      padding: 7px 6px;
+      text-align: center;
+      position: relative;
+      font-size: 8pt;
+      line-height: 1.3;
+    }
+    .pipe-step:nth-child(2) { background: var(--navy-light); }
+    .pipe-step:nth-child(3) { background: var(--teal); }
+    .pipe-step:nth-child(4) { background: var(--orange); }
+    .pipe-step:nth-child(5) { background: var(--gold); }
+
+    .pipe-step::after {
+      content: '▶';
+      position: absolute;
+      right: -9px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--white);
+      font-size: 10pt;
+      z-index: 1;
+    }
+    .pipe-step:last-child::after { content: ''; }
+
+    .pipe-step .label { font-weight: 700; font-size: 7.5pt; opacity: .75; margin-bottom: 2px; text-transform: uppercase; letter-spacing: .5px; }
+    .pipe-step .val   { font-weight: 600; }
+
+    .pipe-note {
+      font-size: 8pt;
+      color: #666;
+      font-style: italic;
+      margin-top: 4px;
+    }
+
+    /* ── COMPARISON TABLE ──────────────────────────────────────── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin: 8px 0;
+    }
+
+    thead th {
+      background: var(--navy);
+      color: var(--white);
+      padding: 7px 8px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 9pt;
+    }
+    thead th:first-child { border-radius: 4px 0 0 0; }
+    thead th:last-child  { border-radius: 0 4px 0 0; }
+
+    tbody tr:nth-child(even) { background: var(--gray-bg); }
+    tbody tr:nth-child(odd)  { background: var(--white); }
+
+    tbody td {
+      padding: 6px 8px;
+      border-bottom: 1px solid var(--gray-line);
+      vertical-align: top;
+      font-size: 9pt;
+    }
+
+    tbody td:first-child { font-weight: 600; color: var(--navy); }
+
+    tbody td.after {
+      color: var(--teal);
+      font-weight: 600;
+    }
+
+    /* ── BENEFIT CARDS ─────────────────────────────────────────── */
+    .benefit-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 10px 0;
+    }
+
+    .benefit-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: var(--gray-bg);
+      border-radius: var(--radius);
+      padding: 9px 11px;
+      border-left: 4px solid var(--teal);
+    }
+    .benefit-card.orange { border-left-color: var(--orange); }
+    .benefit-card.gold   { border-left-color: var(--gold); }
+
+    .benefit-card .bc-icon {
+      font-size: 18px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .benefit-card .bc-body strong {
+      display: block;
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .benefit-card .bc-body p {
+      font-size: 9pt;
+      margin: 0;
+      color: #444;
+    }
+
+    /* ── SFPM ROLE BOX ─────────────────────────────────────────── */
+    .sfpm-role {
+      background: linear-gradient(90deg, #FFF4EE, #FFF9F5);
+      border: 1.5px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      margin: 10px 0;
+      font-size: 9pt;
+    }
+
+    .sfpm-role strong { color: var(--orange); }
+
+    /* ── SCHEMA BOX ────────────────────────────────────────────── */
+    .schema {
+      background: var(--gray-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-line);
+      padding: 10px 12px;
+      margin: 10px 0;
+      font-size: 9pt;
+    }
+
+    .schema-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--navy);
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--gray-line);
+      padding-bottom: 4px;
+    }
+
+    .schema-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 5px;
+    }
+
+    .schema-row .actor {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 4px;
+      padding: 3px 7px;
+      font-size: 8pt;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .schema-row .arrow { color: var(--orange); font-weight: 700; }
+
+    .schema-row .dest {
+      background: var(--teal);
+      color: var(--white);
+      border-radius: 4px;
+      padding: 3px 7px;
+      font-size: 8pt;
+      font-weight: 600;
+    }
+
+    .schema-row .note {
+      font-size: 8pt;
+      color: #666;
+      font-style: italic;
+    }
+
+    .schema-hub {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 6px 10px;
+      text-align: center;
+      font-size: 9pt;
+      font-weight: 700;
+      margin: 6px 0;
+    }
+
+    .schema-hub span { color: var(--orange); }
+
+    /* ── TAGS ──────────────────────────────────────────────────── */
+    .tag-row { display: flex; flex-wrap: wrap; gap: 5px; margin: 6px 0; }
+
+    .tag {
+      background: var(--teal-light);
+      color: var(--teal);
+      border: 1px solid var(--teal);
+      border-radius: 20px;
+      padding: 2px 8px;
+      font-size: 8pt;
+      font-weight: 600;
+    }
+
+    /* ── REFERENCES ────────────────────────────────────────────── */
+    .ref-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 8.5pt;
+      color: #555;
+    }
+
+    .ref-list li {
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .ref-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+    }
+
+    /* ── FOOTER ────────────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      color: #8AAAD0;
+      font-size: 8.5pt;
+      padding: 8px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 3px solid var(--orange);
+    }
+
+    footer a { color: var(--orange); text-decoration: none; }
+    footer .conf { color: var(--white); font-weight: 700; }
+
+    /* ── SEPARATOR LINE IN SAME COLUMN ─────────────────────────── */
+    .col-separator {
+      border: none;
+      border-top: 1px dashed var(--gray-line);
+      margin: 12px 0;
+    }
+
+    /* ── FULL-WIDTH BAND ───────────────────────────────────────── */
+    .band {
+      grid-column: 1 / -1;
+      background: var(--teal-light);
+      border-top: 2px solid var(--teal);
+      border-bottom: 2px solid var(--teal);
+      padding: 10px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .band .band-section-label {
+      font-size: 11pt;
+      font-weight: 800;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    /* ── PRINT ─────────────────────────────────────────────────── */
+    @media print {
+      body { background: white; padding: 0; }
+      .poster { box-shadow: none; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header>
+    <div class="logo-box">
+      <div class="logo-sfpm">sfpm</div>
+    </div>
+
+    <div class="title-block">
+      <h1>
+        <span class="highlight">AuditRay</span> : vers un écosystème unifié pour
+        l'assurance qualité en radiothérapie —<br>
+        architecture native <em>ANSM 2023</em>, <em>scripting communautaire</em> et <em>intelligence artificielle</em>
+      </h1>
+      <div class="author">Kayhan KAPTAN<sup>1</sup></div>
+      <div class="affil"><sup>1</sup>Kaptan Data Solutions (KDS) — Paucourt, France</div>
+      <div class="abbrev">SaaS = Software as a Service &nbsp;|&nbsp; IA = Intelligence Artificielle &nbsp;|&nbsp; AQ = Assurance Qualité</div>
+    </div>
+
+    <div class="logo-box">
+      <div class="logo-kds">KDS</div>
+    </div>
+  </header>
+
+  <!-- ══════════ BODY ══════════ -->
+  <div class="body">
+
+    <!-- ═══ COLONNE 1 — INTRODUCTION + MATÉRIELS ═══ -->
+    <div class="col">
+      <div class="section-label">Introduction</div>
+
+      <h3>Jeux de données en Assurance Qualité</h3>
+      <p>
+        L'AQ repose sur une multiplicité d'outils hétérogènes : silos de données, workflows fragmentés,
+        exports manuels chronophages.
+      </p>
+      <p>
+        Par conséquent, l'essor de l'IA en physique médicale se heurte à un <strong>manque critique</strong>
+        de jeux de données structurés, annotés et mutualisés à l'échelle nationale.
+        Le groupe UNITRAD travaille sur les données médicales — quid des jeux de données d'AQ,
+        synthétiques ou réelles&nbsp;?
+      </p>
+
+      <div class="citation">
+        <strong>Comment AuditRay centralise et structure les données d'AQ pour libérer l'innovation
+        en physique médicale</strong><br>
+        — tout en garantissant la conformité réglementaire&nbsp;?
+      </div>
+
+      <p><strong>AuditRay</strong> (KDS) répond directement à cette problématique&nbsp;:</p>
+      <ul>
+        <li>Centralisation des <strong>135 contrôles ANSM</strong> — architecture native UC1–UC8 / S1–S3</li>
+        <li>Automatisation des analyses et génération de rapports d'audit <strong>en un clic</strong></li>
+        <li><strong>Écosystème communautaire</strong> ouvert (scripts, templates, plugins)</li>
+      </ul>
+
+      <hr class="col-separator" />
+
+      <div class="section-label">Matériels &amp; Méthodes</div>
+
+      <h3>Proposition : AuditRay — plateforme SaaS unifiée</h3>
+      <ul>
+        <li>Centraliser les 135 contrôles ANSM dans un modèle de données natif UC1–UC8 / S1–S3</li>
+        <li>Automatiser les analyses métier — rapports réglementaires sans reconstruction a posteriori</li>
+        <li>Fédérer la communauté autour d'un marketplace de contributions ouvertes</li>
+      </ul>
+
+      <h3>Les 4 axes structurants d'AuditRay</h3>
+      <div class="axes-grid">
+        <div class="axe-card">
+          <div class="axe-num">Axe 1</div>
+          <div class="axe-title">Environnement d'analyse ouvert</div>
+          <p>Hub Python via <strong>API REST</strong> : chaque physicien déploie ses propres modules d'analyse alimentant les dashboards AuditRay.</p>
+        </div>
+        <div class="axe-card orange">
+          <div class="axe-num">Axe 2</div>
+          <div class="axe-title">Unification des données</div>
+          <p>Import multi-sources : <strong>DICOM, CSV, PTW / IBA</strong> (quand non cryptés). Centralisation et traçabilité complètes.</p>
+        </div>
+        <div class="axe-card gold">
+          <div class="axe-num">Axe 3</div>
+          <div class="axe-title">Réglementation comme architecture</div>
+          <p>Modélisation native des <strong>135 UC1–UC8 / S1–S3</strong> (ANSM 2023), intégrée aux workflows et rapports.</p>
+        </div>
+        <div class="axe-card navy">
+          <div class="axe-num">Axe 4</div>
+          <div class="axe-title">Comparaison multi-centrique</div>
+          <p>Benchmark LINAC via AuditRay — ajustement des seuils d'action par retours d'expérience agrégés.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ COLONNE 2 — SCRIPTING + SCHEMA ═══ -->
+    <div class="col">
+      <div class="section-label">Matériels &amp; Méthodes (suite)</div>
+
+      <h3>Capitaliser sur l'existant — le scripting</h3>
+      <ul>
+        <li>De nombreux centres utilisent déjà le scripting via <strong>pylinac</strong>.</li>
+        <li>Tests standards couverts&nbsp;: Picket Fence, Winston-Lutz, VMAT QA, Starshot.</li>
+        <li>AuditRay s'intègre à ces workflows via son <strong>marketplace de plugins communautaires</strong>
+            et son <strong>API REST publique</strong>.</li>
+        <li>L'adhésion des constructeurs à la <strong>charte UniteRT</strong> (partage gratuit des spécifications,
+            standardisation DICOM/HL7) facilite la mutualisation des données d'AQ pour l'IA.</li>
+      </ul>
+
+      <div class="tag-row">
+        <span class="tag">pylinac</span>
+        <span class="tag">Picket Fence</span>
+        <span class="tag">Winston-Lutz</span>
+        <span class="tag">VMAT QA</span>
+        <span class="tag">Starshot</span>
+        <span class="tag">DICOM</span>
+        <span class="tag">HL7</span>
+      </div>
+
+      <h3>Référentiel collaboratif national</h3>
+      <p>
+        Partage de jeux de données anonymisés ou simulés via AuditRay, incluant des <strong>cas hors
+        tolérances</strong> cliniquement pertinents mais rares, ainsi que des scripts d'analyse développés
+        par la communauté via le marketplace (<code>community-plugins.json</code>, <code>community-templates.json</code>).
+      </p>
+
+      <h3>Briques techniques mobilisées</h3>
+      <p>Pipeline open-source pensé pour la physique médicale&nbsp;:</p>
+
+      <div class="pipeline">
+        <div class="pipe-step">
+          <div class="label">Sources</div>
+          <div class="val">INGEST</div>
+        </div>
+        <div class="pipe-step">
+          <div class="label">Traitement</div>
+          <div class="val">ANALYSE</div>
+        </div>
+        <div class="pipe-step">
+          <div class="label">Données</div>
+          <div class="val">MODEL</div>
+        </div>
+        <div class="pipe-step">
+          <div class="label">Sortie</div>
+          <div class="val">RENDER</div>
+        </div>
+      </div>
+      <p class="pipe-note">⤺ Flux de traçabilité bidirectionnel — chaque mesure est traçable jusqu'à sa source brute</p>
+
+      <hr class="col-separator" />
+
+      <h3>Schéma — Référentiel collaboratif AuditRay</h3>
+      <div class="schema">
+        <div class="schema-title">Schéma Écosystème</div>
+
+        <div class="schema-row">
+          <span class="actor">Physiciens médicaux</span>
+          <span class="arrow">→</span>
+          <span class="dest">push données AQ + scripts</span>
+        </div>
+        <div class="schema-row">
+          <span class="actor">Développeurs IA</span>
+          <span class="arrow">→</span>
+          <span class="dest">train modèles / publish algos</span>
+        </div>
+
+        <div class="schema-hub">
+          <span>Référentiel national AuditRay</span><br>
+          <small style="font-weight:400;opacity:.8;">Jeux réels anonymisés &nbsp;|&nbsp; Données synthétiques &nbsp;|&nbsp; Cas hors tolérances &nbsp;|&nbsp; Scripts d'analyse</small>
+        </div>
+
+        <div class="schema-row">
+          <span class="actor">SFPM</span>
+          <span class="arrow">→</span>
+          <span class="note">gouvernance · validation · standardisation</span>
+        </div>
+        <div class="schema-row">
+          <span class="actor">Industrie</span>
+          <span class="arrow">→</span>
+          <span class="note">open source · connecteurs · retours d'usage</span>
+        </div>
+
+        <p style="font-size:8pt;color:#666;margin-top:8px;font-style:italic;">
+          Cycle vertueux : plus de contributions → plus de robustesse algorithmique
+        </p>
+      </div>
+    </div>
+
+    <!-- ═══ COLONNE 3 — RÉSULTATS + CONCLUSION ═══ -->
+    <div class="col">
+      <div class="section-label">Résultats</div>
+
+      <h3>Avant / Après — Ce qui change concrètement avec AuditRay</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Aujourd'hui (silos)</th>
+            <th>Avec AuditRay</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Outils d'AQ</td>
+            <td>Multiplicité hétérogène, exports manuels</td>
+            <td class="after">Plateforme SaaS unifiée — 135 contrôles ANSM</td>
+          </tr>
+          <tr>
+            <td>Conformité ANSM 2023</td>
+            <td>Reporting reconstruit a posteriori</td>
+            <td class="after">Architecture native UC1–UC8 / S1–S3</td>
+          </tr>
+          <tr>
+            <td>Jeux de données IA</td>
+            <td>Rares, locaux, non annotés</td>
+            <td class="after">Mutualisés, représentatifs des pratiques françaises</td>
+          </tr>
+          <tr>
+            <td>Validation algorithmes</td>
+            <td>Isolée, peu reproductible</td>
+            <td class="after">Communautaire, scripts partagés via marketplace</td>
+          </tr>
+          <tr>
+            <td>Comparaison inter-centres</td>
+            <td>Difficile (LINAC, matériel AQ différent)</td>
+            <td class="after">Benchmark LINAC intégré dans AuditRay</td>
+          </tr>
+          <tr>
+            <td>Scripts d'analyse</td>
+            <td>Privés, redondants</td>
+            <td class="after">Open-source, capitalisés en Python via API AuditRay</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Bénéfices structurants</h3>
+      <div class="benefit-cards">
+        <div class="benefit-card orange">
+          <div class="bc-icon">⚡</div>
+          <div class="bc-body">
+            <strong>Accélération de l'IA</strong>
+            <p>Développement et validation d'algorithmes facilités par des jeux de données partagés et représentatifs des pratiques françaises, centralisés dans AuditRay.</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="bc-icon">✅</div>
+          <div class="bc-body">
+            <strong>Conformité native</strong>
+            <p>Architecture alignée d'emblée sur la décision ANSM 2023 — <strong>135 contrôles</strong> intégrés nativement, réduisant la dette documentaire des centres.</p>
+          </div>
+        </div>
+        <div class="benefit-card gold">
+          <div class="bc-icon">🤝</div>
+          <div class="bc-body">
+            <strong>Communauté collaborative</strong>
+            <p>Mutualisation des scripts et des retours d'expérience via le marketplace AuditRay (plugins, templates, contributions ouvertes).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sfpm-role">
+        <strong>Enjeux à adresser → Rôle SFPM</strong> — tiers de confiance national&nbsp;:
+        certifie le pipeline, valide les scripts, garantit l'anonymisation —
+        déchargeant juridiquement les établissements contributeurs.
+      </div>
+
+      <hr class="col-separator" />
+
+      <div class="section-label">Conclusion</div>
+      <p>
+        <strong>AuditRay</strong> (KDS) constitue une réponse concrète et opérationnelle à la question
+        de l'IA pour l'AQ en radiothérapie : allier l'IA à une infrastructure collaborative de données
+        représente un levier structurant pour la physique médicale française.
+      </p>
+      <p>
+        Pour fédérer les initiatives de la SFPM, AuditRay propose un socle commun immédiatement disponible —
+        <strong>plateforme SaaS unifiée, architecture ANSM 2023 native, écosystème communautaire ouvert</strong>.
+        L'auteur invite la communauté à contribuer via le dépôt public et le marketplace de plugins.
+      </p>
+      <p style="font-size:9pt;font-style:italic;color:#666;">
+        Alors qu'UNITRAD œuvre sur les données médicales et UniteRT sur la standardisation DICOM/HL7,
+        AuditRay répond à la question : quid de l'IA pour l'AQ&nbsp;? L'implémentation de référence
+        est en cours de développement actif.
+      </p>
+
+      <hr class="col-separator" />
+
+      <div class="section-label">Références</div>
+      <ul class="ref-list">
+        <li>ANSM. Décision du 28/02/2023 — CQ des installations de radiothérapie externe (UC1–UC8, S1–S3).</li>
+        <li>Groupe UNITRAD. Mutualisation des données médicales en radiothérapie. <em>sfpm.fr</em></li>
+        <li>UniteRT. Charter of principles. <em>unitert.org</em></li>
+        <li>KDS. <em>AuditRay — Radiotherapy quality control, finally unified.</em> kaptan-data-solutions.app</li>
+        <li>Dépôt communautaire AuditRay. <em>github.com/kaptandatasolutions/auditray-release</em></li>
+      </ul>
+
+      <p style="font-size:8.5pt;color:#888;margin-top:10px;font-style:italic;">
+        Aucun conflit d'intérêt déclaré. Contributions et partenariats institutionnels bienvenus.
+      </p>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer>
+    <span class="conf">SFPM 2026 — Lyon</span>
+    <span>AuditRay &nbsp;|&nbsp; <a href="https://www.kaptan-data-solutions.app">kaptan-data-solutions.app</a> &nbsp;|&nbsp; <a href="https://github.com/kaptandatasolutions/auditray-release">github.com/kaptandatasolutions/auditray-release</a></span>
+    <span>Kayhan KAPTAN — KDS</span>
+  </footer>
+
+</div><!-- /poster -->
+</body>
+</html>
