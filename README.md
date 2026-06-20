@@ -63,7 +63,7 @@ Ce dépôt héberge les **releases publiques d'AuditRay**, la documentation offi
 ## ✨ Fonctionnalités
 
 > [!NOTE]
-> Ce dépôt contient également une collection de **jeux de données DICOM et Excel anonymisés** pour tester vos scripts d'analyse. Consultez le dossier [`Jeux de données/`](Jeux%20de%20données/README.md).
+> Ce dépôt contient un **référentiel national collaboratif** structuré en 4 axes à la racine : [`jeux-reels-anonymises/`](jeux-reels-anonymises/README.md), [`donnees-synthetiques/`](donnees-synthetiques/README.md), [`cas-hors-tolerances/`](cas-hors-tolerances/README.md) et [`scripts-analyse/`](scripts-analyse/README.md). Les données brutes par type de test (Picket Fence, Winston-Lutz, VMAT…) se trouvent dans [`Jeux de données/`](Jeux%20de%20données/README.md).
 
 <table>
   <tr>
@@ -104,17 +104,15 @@ Ce dépôt héberge les **releases publiques d'AuditRay**, la documentation offi
 
 ```
 auditray-release/
-├── AuditRay_img.png                  # Logo officiel AuditRay
-├── README.md                          # Ce fichier (Français)
-├── READMEs/                           # Traductions
-│   ├── README.en.md                   # English
-│   ├── README.es.md                   # Español
-│   ├── README.de.md                   # Deutsch
-│   ├── README.it.md                   # Italiano
-│   ├── README.pt.md                   # Português
-│   ├── README.ja.md                   # 日本語
-│   └── README.zh.md                   # 中文
-├── Jeux de données/                   # Données de référence anonymisées
+│
+│  ── Référentiel national collaboratif ──────────────────────────────────
+├── jeux-reels-anonymises/             # Données terrain LINAC réels, anonymisées
+├── donnees-synthetiques/              # Données générées pour l'entraînement IA
+├── cas-hors-tolerances/               # Dépassements cliniques pertinents et rares
+├── scripts-analyse/                   # Scripts Python intégrables via API AuditRay
+│
+│  ── Données de référence par type de test (ANSM) ───────────────────────
+├── Jeux de données/                   # Données brutes de référence
 │   ├── README.md
 │   ├── picket-fence/                  # UC3 — MLC
 │   ├── winston-lutz/                  # UC3 — Isocentre
@@ -125,6 +123,18 @@ auditray-release/
 │   ├── field-size/                    # UC2 — Taille de champ
 │   ├── gamma-index/                   # UC4/UC5 — Indice gamma patient
 │   └── image-qualite/                 # UC6 — Qualité d'image
+│
+│  ── Documentation & gouvernance ────────────────────────────────────────
+├── AuditRay_img.png                   # Logo officiel AuditRay
+├── README.md                          # Ce fichier (Français)
+├── READMEs/                           # Traductions
+│   ├── README.en.md                   # English
+│   ├── README.es.md                   # Español
+│   ├── README.de.md                   # Deutsch
+│   ├── README.it.md                   # Italiano
+│   ├── README.pt.md                   # Português
+│   ├── README.ja.md                   # 日本語
+│   └── README.zh.md                   # 中文
 ├── CONTRIBUTING.md                    # Guide de contribution
 ├── CODE_OF_CONDUCT.md                 # Code de conduite
 ├── SECURITY.md                        # Signalement de vulnérabilités
@@ -237,7 +247,11 @@ Consultez [CONTRIBUTING.md](CONTRIBUTING.md) pour le guide complet.
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Guide complet pour soumettre plugins, templates et corrections |
 | [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Règles de la communauté AuditRay |
 | [SECURITY.md](SECURITY.md) | Signalement de vulnérabilités et règles PHI/DCP |
-| [Jeux de données/README.md](Jeux%20de%20données/README.md) | Description des données de référence et correspondance UC ANSM |
+| [Jeux de données/README.md](Jeux%20de%20données/README.md) | Données brutes de référence par type de test (UC ANSM) |
+| [jeux-reels-anonymises/](jeux-reels-anonymises/README.md) | Référentiel — données terrain LINAC anonymisées |
+| [donnees-synthetiques/](donnees-synthetiques/README.md) | Référentiel — données générées pour l'IA |
+| [cas-hors-tolerances/](cas-hors-tolerances/README.md) | Référentiel — dépassements cliniques rares |
+| [scripts-analyse/](scripts-analyse/README.md) | Référentiel — scripts Python communautaires |
 
 ---
 

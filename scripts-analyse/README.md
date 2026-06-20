@@ -150,6 +150,6 @@ Le résultat JSON est automatiquement intégré dans votre tableau de bord Audit
 2. Ajoutez `analyse.py`, `requirements.txt`, `plugin.json` et `README.md`
 3. Incluez des exemples d'entrée/sortie dans `examples/`
 4. Testez votre script sur au minimum un jeu de données du référentiel
-5. Ouvrez une pull request — consultez [CONTRIBUTING.md](../../CONTRIBUTING.md)
+5. Ouvrez une pull request — consultez [CONTRIBUTING.md](../CONTRIBUTING.md)
 
-Pour soumettre votre script au marketplace AuditRay, ajoutez également votre entrée dans [`community-plugins.json`](../../community-plugins.json) à la racine du dépôt.
+Pour soumettre votre script au marketplace AuditRay, ajoutez également votre entrée dans [`community-plugins.json`](../community-plugins.json) à la racine du dépôt.

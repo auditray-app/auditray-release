@@ -114,10 +114,10 @@ cas-hors-tolerances/
 
 ## Comment contribuer
 
-1. Anonymisez rigoureusement vos données (voir règles ci-dessus + [SECURITY.md](../../SECURITY.md))
+1. Anonymisez rigoureusement vos données (voir règles ci-dessus + [SECURITY.md](../SECURITY.md))
 2. Classifiez le niveau de gravité (`avertissement`, `intervention`, `critique`)
 3. Créez un sous-dossier nommé `<type>_<niveau>_<description>`
 4. Ajoutez vos fichiers, `metadata.json` et `rapport_analyse.json`
-5. Ouvrez une pull request — consultez [CONTRIBUTING.md](../../CONTRIBUTING.md)
+5. Ouvrez une pull request — consultez [CONTRIBUTING.md](../CONTRIBUTING.md)
 
 > Ces cas sont particulièrement précieux pour la communauté. Merci de les partager — chaque retour d'expérience contribue à la sécurité des patients en radiothérapie.

@@ -104,6 +104,6 @@ jeux-reels-anonymises/
 1. Anonymisez vos fichiers (voir règles ci-dessus)
 2. Créez un sous-dossier nommé `<type>_<equipement>_<annee>`
 3. Ajoutez vos fichiers et un `metadata.json`
-4. Ouvrez une pull request — consultez [CONTRIBUTING.md](../../CONTRIBUTING.md)
+4. Ouvrez une pull request — consultez [CONTRIBUTING.md](../CONTRIBUTING.md)
 
-Pour toute question sur l'anonymisation ou la conformité PHI, consultez [SECURITY.md](../../SECURITY.md).
+Pour toute question sur l'anonymisation ou la conformité PHI, consultez [SECURITY.md](../SECURITY.md).

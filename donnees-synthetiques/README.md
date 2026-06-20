@@ -118,4 +118,4 @@ generate_synthetic_picket_fence(mlc_error_mm=0.3, seed=42)
 
 1. Créez un sous-dossier `<type>_<methode>_<version>`
 2. Incluez vos fichiers de données, le script de génération et `metadata.json`
-3. Ouvrez une pull request — consultez [CONTRIBUTING.md](../../CONTRIBUTING.md)
+3. Ouvrez une pull request — consultez [CONTRIBUTING.md](../CONTRIBUTING.md)
